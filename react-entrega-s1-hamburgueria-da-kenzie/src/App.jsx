@@ -3,17 +3,32 @@
 import { useEffect, useState } from 'react';
 import GlobalStyle from "./Styles/global";
 import Header from './Components/Header';
-import Api from './Api';
+import List from './Components/List';
 
 function App() {
+
  
-  const listProducts = Api()
-  console.log(listProducts)
   return (
     // <GlobalStyle className="App">
     <div className="App">
       <Header className="App-header">
       </Header>
+      <main>
+        <List>
+          {/* {
+            listProducts.map((product) => 
+              <Card 
+                key={product.id}
+                id={product.id}
+                category={product.category}
+                name={product.name}
+                img={product.img}
+                price={product.price}
+              />
+            )
+          } */}
+        </List>
+      </main>
     </div>
     // </GlobalStyle>
   );
