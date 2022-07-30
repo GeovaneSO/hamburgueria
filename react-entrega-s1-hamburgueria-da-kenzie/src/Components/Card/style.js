@@ -10,7 +10,7 @@ export const CardMain = styled.li`
     margin: 0;
     box-sizing: border-box;
 
-    width: 250px;
+    width: 100%;
     height: 320px;
 
     background: #FFFFFF;
@@ -47,6 +47,10 @@ export const CardMain = styled.li`
         /* margin-bottom: 0; */
         p{
             margin: 0;
+            width: max-content;
+        }
+        span{
+            width: max-content;
         }
     }
     button{

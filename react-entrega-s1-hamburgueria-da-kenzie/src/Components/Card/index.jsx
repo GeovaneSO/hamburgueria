@@ -1,11 +1,20 @@
 import { useEffect, useState } from 'react';
-// import Api from './Api';
+import Api from '../../Api';
 // const listProducts = Api()
-import App from '../../App';
+// import App from '../../App';
+import Button from '../Button';
 import { CardMain } from './style';
 
-function Card({id, category, name, price, img}){
-    
+function Card({setCurrentSale,currentSale,id, category, name, price, img}){    
+    const listProducts = Api();
+
+    function findProduct(){
+        const product = listProducts.find((product) => product.id === id);
+        const listFilter = currentSale.filter((item) => item.id !== product.id);
+
+        setCurrentSale([...listFilter, product]);
+    }
+
     return(
         <CardMain >
             <figure><img src={img} alt={name} /></figure>
@@ -14,7 +23,7 @@ function Card({id, category, name, price, img}){
                 <span className='category'>{category}</span>
                 <p className='price'>{price}</p>
             </div>
-            <button id={id}>Adicionar</button>
+            <Button id={id} onClick={findProduct}>Adicionar</Button>
         </CardMain>
     );
 }
