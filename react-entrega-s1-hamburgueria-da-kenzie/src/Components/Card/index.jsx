@@ -7,6 +7,7 @@ import { CardMain } from './style';
 
 function Card({setCurrentSale,currentSale,id, category, name, price, img}){    
     const listProducts = Api();
+    const priceFinal =     new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price);
 
     function findProduct(){
         const product = listProducts.find((product) => product.id === id);
@@ -21,7 +22,7 @@ function Card({setCurrentSale,currentSale,id, category, name, price, img}){
             <div className='info'>
                 <p className='name'>{name}</p>
                 <span className='category'>{category}</span>
-                <p className='price'>{price}</p>
+                <p className='price'>{priceFinal}</p>
             </div>
             <Button id={id} onClick={findProduct}>Adicionar</Button>
         </CardMain>

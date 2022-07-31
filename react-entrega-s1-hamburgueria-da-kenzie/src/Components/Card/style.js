@@ -10,7 +10,7 @@ export const CardMain = styled.li`
     margin: 0;
     box-sizing: border-box;
 
-    width: 100%;
+    width: 254px;
     height: 320px;
 
     background: #FFFFFF;
@@ -38,21 +38,39 @@ export const CardMain = styled.li`
     .info{
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        align-items: flex-start;
+
+        gap: 12px;
+        height: 80px;
 
         padding: 0 15px;
-
         margin: 15px 0;
 
-        /* margin-bottom: 0; */
         p{
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+
+            text-overflow: ellipsis;
+            max-width: 12ch;
+            overflow: hidden;
+            white-space: nowrap;
+
+
+            color: #333333;
             margin: 0;
-            width: max-content;
         }
         span{
-            width: max-content;
+            font-size: 12px;
+            line-height: 16px;
+            color: #828282;
+        }
+        .price{
+            color: #27AE60;
         }
     }
+
     button{
         height: 30px;
         width: 100px;

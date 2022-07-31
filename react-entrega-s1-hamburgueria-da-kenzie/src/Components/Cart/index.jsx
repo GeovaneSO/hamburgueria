@@ -1,4 +1,5 @@
 import Card from '../Card';
+import { TitleCart } from "../Cart/style";
 import CardCart from '../CardCart';
 import { CartContainer } from './style';
 import TotalMoney from '../TotalMoney';
@@ -7,9 +8,9 @@ import Button from '../Button';
 function Cart({currentSale, setCurrentSale}){
     return (
         <> 
-            <div className="title__cart">
+            <TitleCart className="title__cart">
                 <h2>Carrinho de compras</h2>
-            </div>
+            </TitleCart>
 
             <CartContainer className='cart__container'>
                 <ul className="list__cart">
@@ -38,7 +39,7 @@ function Cart({currentSale, setCurrentSale}){
                 </ul>
                 {
                     currentSale.length > 0 &&
-                    <TotalMoney currentSale={currentSale}/>
+                    <TotalMoney setCurrentSale={setCurrentSale} currentSale={currentSale}/>
                 }
             </CartContainer>
         </>

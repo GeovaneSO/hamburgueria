@@ -4,7 +4,7 @@ export const CardCartAdd = styled.li`
     display: flex;
     justify-content: space-between;
 
-    width: 372px;
+    width: 100%;
     height: 80px;
 
     margin: 0;
@@ -18,9 +18,9 @@ export const CardCartAdd = styled.li`
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 15px;
+        gap: 12px;
 
-    width: 190px;
+        width: 205px;
 
         figure{
         width: 80px;
@@ -39,22 +39,53 @@ export const CardCartAdd = styled.li`
             }
         }
         .info{
-            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
+            gap: 12px;
+            height: 80px;
+
+            margin: 0;
+            margin-top: 12px;
             p{
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+
+                text-overflow: ellipsis;
+                max-width: 12ch;
+                overflow: hidden;
+                white-space: nowrap;
+
+
+                color: #333333;
                 margin: 0;
+            }
+            span{
+                font-size: 12px;
+                line-height: 16px;
+                color: #828282;
             }
         }
     }
     .box__btn{
         button{
             margin: 0;
+            margin-top: 12px;
             padding: 0;
             border: none;
             background: transparent;
             width: max-content;
             height: max-content;
-            border: none
+            border: none;
+
+            font-weight: 500;
+            font-size:12px;
+            line-height: 15px;
+            color: #BDBDBD;
+
         }
     }
 `

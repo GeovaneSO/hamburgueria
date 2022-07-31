@@ -1,17 +1,25 @@
 import { ContainerTotal } from "./style";
 import Button from "../Button";
-function TotalMoney ({currentSale}){
-    const total = currentSale.reduce((acc, val) => {
+
+function TotalMoney ({currentSale, setCurrentSale}){
+    const value = currentSale.reduce((acc, val) => {
         return acc + val.price
     }, 0);
+
+    const total = Math.round(value);
+    const final =     new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total);
+
+    function removeAll(){
+        setCurrentSale([]);
+    };
 
     return(
         <ContainerTotal className="container">
             <div>
-            <p>Total</p>
-            <p>{total}</p>
+                <p className="total">Total</p>
+                <p className="price">{final}</p>
             </div>
-            <Button>Remover todos</Button>
+            <Button onClick={removeAll}>Remover todos</Button>
         </ContainerTotal>
     );
 };

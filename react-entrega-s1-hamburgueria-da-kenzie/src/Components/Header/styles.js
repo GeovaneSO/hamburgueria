@@ -26,6 +26,7 @@ export const HeaderMain = styled.header`
         margin: 0 auto;
         figure{
             margin: 0;
+            cursor: pointer;
         }
         .box__search{
             display: flex;
