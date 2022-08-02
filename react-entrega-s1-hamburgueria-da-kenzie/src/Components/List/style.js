@@ -19,7 +19,7 @@ export const BoxResult = styled.div`
 export const ListMain = styled.ul`
     display: flex;
     overflow-x: auto;
-    
+
     gap: 20px;
     margin: 0;
     padding: 20px;
@@ -33,11 +33,11 @@ export const ListMain = styled.ul`
         height: 450px;
         overflow-y: auto;
     }
-    @media(min-width: 1000px){
+    @media(min-width: 1200px){
         height: 100%;
         flex-wrap: wrap;
-        overflow: hidden;
-        width: ${({itens}) => itens.length < 4 ? '989px': ' fit-content'};
+        /* overflow-y: hidden; */
+        /* width: ${({itens}) => itens.length < 4  ? '953px': ' 953px'}; */
         /* width: 989px; */
     }
 `

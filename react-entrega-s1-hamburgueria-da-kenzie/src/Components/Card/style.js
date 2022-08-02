@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const CardMain = styled.li`
     display: flex;
     flex-direction: column;
-    /* gap: 15px; */
 
     list-style: none;
     padding: 0;
