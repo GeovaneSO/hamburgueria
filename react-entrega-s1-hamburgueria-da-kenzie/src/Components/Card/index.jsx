@@ -1,7 +1,4 @@
-import { useEffect, useState } from 'react';
 import Api from '../../Api';
-// const listProducts = Api()
-// import App from '../../App';
 import Button from '../Button';
 import { CardMain } from './style';
 

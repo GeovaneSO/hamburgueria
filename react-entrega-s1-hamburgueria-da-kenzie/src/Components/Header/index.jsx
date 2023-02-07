@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import { HeaderMain } from './styles';
 import logo from '../../logo.svg'
 

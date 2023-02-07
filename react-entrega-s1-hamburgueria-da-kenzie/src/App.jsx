@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import GlobalStyle from "./Styles/global";
+import {  useState } from 'react';
 
 
 import Header from './Components/Header';
@@ -13,28 +12,18 @@ function App() {
 
 
   return (
-    // <GlobalStyle className="App">
     <div className="App">
-      <Header className="App-header" setNameProduct={setNameProduct}>
-      </Header>
+      <Header className="App-header" setNameProduct={setNameProduct}/>
       <main>
         <section className="section__list">
-          <List setCurrentSale={setCurrentSale} currentSale={currentSale} nameProduct={nameProduct} >
-          </List>
+          <List setCurrentSale={setCurrentSale} currentSale={currentSale} nameProduct={nameProduct} /> 
         </section>
         <section className='section__cart'>
-          <Cart setCurrentSale={setCurrentSale} currentSale={currentSale}>
-
-          </Cart>
+          <Cart setCurrentSale={setCurrentSale} currentSale={currentSale}/>
         </section>
       </main>
     </div>
-    // </GlobalStyle>
   );
 }
 
 export default App;
-// const [products, setProducts] = useState([]);
-// const [filteredProducts, setFilteredProducts] = useState([]);
-// const [currentSale, setCurrentSale] = useState([])
-// const [cartTotal, setCartTotal] = useState(0)

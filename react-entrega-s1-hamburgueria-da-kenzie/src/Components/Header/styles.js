@@ -5,7 +5,10 @@ export const HeaderMain = styled.header`
 
     margin: 0;
     padding: 0;
-
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    bottom: auto;
     box-sizing: border-box;
 
     background: #F5F5F5;
@@ -15,7 +18,7 @@ export const HeaderMain = styled.header`
         flex-direction: column;
         align-items: center;
         gap: 10px;
-
+        
 
         width: 100%;
 

@@ -1,13 +1,17 @@
 .App {
   text-align: center;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 main{
   display: flex;
   flex-direction: column;
+  
 
   height: 100%;
+  margin-top: 120px;
   overflow: hidden;
 }
 .App button{

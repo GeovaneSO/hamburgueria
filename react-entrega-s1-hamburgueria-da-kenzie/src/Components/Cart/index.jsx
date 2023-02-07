@@ -1,9 +1,7 @@
-import Card from '../Card';
 import { TitleCart } from "../Cart/style";
 import CardCart from '../CardCart';
 import { CartContainer } from './style';
 import TotalMoney from '../TotalMoney';
-import Button from '../Button';
 
 function Cart({currentSale, setCurrentSale}){
     return (
